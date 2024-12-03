@@ -45,6 +45,7 @@ int day3()
     while (file.get(ch)) {
         auto a = list[ch];
         auto b = ch;
+        
         if(lastValue == 0 && list[ch] != 1)
             continue;
 
@@ -63,11 +64,11 @@ int day3()
         if(list[ch] != 10)
             lastValue = list[ch];
 
-
-        
         if(list[ch] == 10)
             value = value*10;  
+        
+        tempData += ch;
     }
 
-    std::cout << data <<std::endl; 
+    std::cout << tempData <<std::endl; 
 }
