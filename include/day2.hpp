@@ -1,4 +1,4 @@
-#include "dataDay2.h"
+#include "../data/dataDay2.h"
 #include <iostream>
 
 void day2()
@@ -10,14 +10,13 @@ void day2()
         std::cout <<i<< ": ";
         for (int y = 1; y < 8; y++)
         {
-           
             int diff = list2d[i][y - 1] - list2d[i][y];
             int temp = list2d[i][y];
 
             if (y == 1)
             {
                 if ((abs(diff)) > 3 || diff == 0){
-                    std::cout<<" \033[1;31m"<<list2d[i][y-1] <<" "<<list2d[i][y] << " \033[0m";
+                    std::cout<<" "<<list2d[i][y-1] <<" \033[1;31m"<<list2d[i][y] << " \033[0m";
                     break;
                 }
 
@@ -29,7 +28,7 @@ void day2()
                 std::cout << " \033[1;31m"<< list2d[i][y] << "\033[0m";
                 break;
             }
-            
+
             std::cout <<" "<<list2d[i][y];
 
             if (y == 7 || list2d[i][y+1] == 0)
