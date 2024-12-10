@@ -6,5 +6,5 @@
 
 int main()
 {
-    day4::day4();
+    day4::day4_2();
 }
